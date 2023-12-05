@@ -1097,6 +1097,7 @@ GameObject:
   - component: {fileID: 130079701}
   - component: {fileID: 130079700}
   - component: {fileID: 130079699}
+  - component: {fileID: 130079702}
   m_Layer: 0
   m_Name: Vortex (1)
   m_TagString: Untagged
@@ -1169,6 +1170,27 @@ Transform:
   m_Father: {fileID: 1737977990}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
+--- !u!95 &130079702
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 130079698}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &156351153
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1284,12 +1306,22 @@ PlayableDirector:
   m_GameObject: {fileID: 184694451}
   m_Enabled: 1
   serializedVersion: 3
-  m_PlayableAsset: {fileID: 0}
+  m_PlayableAsset: {fileID: 11400000, guid: 9f716539f45d4ae4da0f24175b0cd95d, type: 2}
   m_InitialState: 1
   m_WrapMode: 2
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: -6063983393840773337, guid: 9f716539f45d4ae4da0f24175b0cd95d, type: 2}
+    value: {fileID: 0}
+  - key: {fileID: -7459481934002664078, guid: 9f716539f45d4ae4da0f24175b0cd95d, type: 2}
+    value: {fileID: 1328281240}
+  - key: {fileID: -9078610999412297963, guid: 9f716539f45d4ae4da0f24175b0cd95d, type: 2}
+    value: {fileID: 1197691775}
+  - key: {fileID: -3241456449188894465, guid: 9f716539f45d4ae4da0f24175b0cd95d, type: 2}
+    value: {fileID: 1736403303}
+  - key: {fileID: -2333722345041063146, guid: 9f716539f45d4ae4da0f24175b0cd95d, type: 2}
+    value: {fileID: 130079702}
   m_ExposedReferences:
     m_References: []
 --- !u!4 &184694453
@@ -8363,6 +8395,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1736403302}
+    - targetCorrespondingSourceObject: {fileID: 4922582553321831162, guid: 76f3439a0ae796e4b81bee3f91f888ee,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1736403303}
   m_SourcePrefab: {fileID: 100100000, guid: 76f3439a0ae796e4b81bee3f91f888ee, type: 3}
 --- !u!1001 &1136892759
 PrefabInstance:
@@ -9257,6 +9293,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 467230, guid: 7b45b788a1417934faed26ad07e2f502,
     type: 3}
   m_PrefabInstance: {fileID: 1312350941}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1328281240 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2495809265442608640, guid: 1ffc730a74f52ec49be45b03fc6b128f,
+    type: 3}
+  m_PrefabInstance: {fileID: 1111193092}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1331345156
 GameObject:
@@ -10425,13 +10467,43 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1736403296}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 83f2fc5989b39fe458b1ffba41a27448, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1754188960}
   boolName: Open
+--- !u!114 &1736403303
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736403296}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52de21a22b6dd44c9cc19f810c65059, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Events:
+    m_Signals:
+    - {fileID: 11400000, guid: 1a9cfd83b1f51c64998d9c991ae1453c, type: 2}
+    m_Events:
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1736403302}
+          m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+          m_MethodName: set_enabled
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
+          m_CallState: 2
 --- !u!1 &1737977989
 GameObject:
   m_ObjectHideFlags: 0
