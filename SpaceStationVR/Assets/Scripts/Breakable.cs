@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using Unity.XR.CoreUtils;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Breakable : MonoBehaviour
 {
     public List<GameObject> breakablePieces;
     public float timeToBreak = 2;
     private float timer = 0;
+    public UnityEvent OnBreak;
 
     // Start is called before the first frame update
     void Start()
@@ -36,6 +38,8 @@ public class Breakable : MonoBehaviour
                 item.SetActive(true);
                 item.transform.parent = null;
             }
+
+            OnBreak.Invoke();
 
             gameObject.SetActive(false);
         }
