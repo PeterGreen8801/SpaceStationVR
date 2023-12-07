@@ -29,6 +29,8 @@ public class PlaySteps : MonoBehaviour
 
         if (!step.hasPlayed)
         {
+            Debug.Log("Playing step: " + step.name);
+
             step.hasPlayed = true;
 
             playableDirector.Stop();
